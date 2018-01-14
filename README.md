@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Custom route loading in rails
 
-Things you may want to cover:
+No longer write routes for your application.
 
-* Ruby version
+From now on, every controller action is loaded from the url.
 
-* System dependencies
+Url are in the form of /controller/action
 
-* Configuration
+Example :
 
-* Database creation
+You have the following controller
+```
+class ProfileController < ApplicationController
+  def index
+  end
+end
+```
 
-* Database initialization
+calling `/profile/index` will execute the controller method and render the index view.
 
-* How to run the test suite
+You could also call `/Profile/` and by default it will load the index action. 
 
-* Services (job queues, cache servers, search engines, etc.)
+The module takes care of loading the right view. It will search this view in the `views/profile` folder.
 
-* Deployment instructions
-
-* ...
+However, if you render inside the controller, the module will detect it and will not render a second time.
