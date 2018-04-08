@@ -1,3 +1,19 @@
 // Place all the styles related to the Profile controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	margin: auto;
+	background-color: white;
+}
+#profile_header {
+	padding: 50px;
+	text-align: center;
+}
+#profile_pic_wrap {
+	display: inline-block;
+	margin: auto;
+}
+.profile_icon {
+	border-radius: 50%;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
